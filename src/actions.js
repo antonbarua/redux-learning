@@ -12,7 +12,7 @@
 const INCREMENT = 'INCREMENT';
 const DECREMENT = 'DECREMENT';
 
-const increment = (text) => ({ type: INCREMENT, text: text });
-const decrement = (text) => ({ type: DECREMENT, text: text });
+const increment = () => ({ type: INCREMENT });
+const decrement = () => ({ type: DECREMENT });
 
 export { INCREMENT, DECREMENT, increment, decrement };
