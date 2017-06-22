@@ -1,7 +1,7 @@
 # redux-learning
 
-git clone
-npm install
-npm run start-dev
+* git clone
+* npm install
+* npm run start-dev
 
-http://localhost:9000
+* http://localhost:9000
