@@ -1,17 +1,10 @@
-//reference: https://webpack.js.org/guides/hmr-react/
-
 const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
     context: path.resolve(__dirname, 'src'),
 
-    entry: [
-        'react-hot-loader/patch', //activate hot-module-replacement for React
-        'webpack-dev-server/client?http://0.0.0.0:8080',
-        'webpack/hot/only-dev-server',
-        './appDev.jsx'
-    ],
+    entry: './index.js',
 
     output: {
         filename: 'bundle.js',
@@ -25,15 +18,11 @@ module.exports = {
 
     devServer: {
         host: "0.0.0.0",
-        hot: true,
+        port: 9000,
         compress: true,
         contentBase: path.resolve(__dirname, 'dist'),
         publicPath: '/dist/js/',
-        historyApiFallback: true,
-
-        proxy: {
-            "/api": "http://0.0.0.0:5000"
-        }
+        historyApiFallback: true
     },
     module: {
         rules: [
@@ -44,11 +33,6 @@ module.exports = {
             }
         ]
     },
-
-    plugins: [
-        new webpack.HotModuleReplacementPlugin(),
-        new webpack.NamedModulesPlugin()
-    ],
 
     watch: true,
     watchOptions: {

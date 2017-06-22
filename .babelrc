@@ -1,5 +1,4 @@
 {
-    //reference: https://webpack.js.org/guides/hmr-react/
     "presets": [
         [
             "es2015",
@@ -8,8 +7,5 @@
             }
         ],
         "react"
-    ],
-    "plugins": [
-        "react-hot-loader/babel"
     ]
 }
